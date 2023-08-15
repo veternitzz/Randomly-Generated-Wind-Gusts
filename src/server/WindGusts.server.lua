@@ -82,6 +82,14 @@ local function PrintAllValues()
 	print("Next gust cycle delay: "..gustCycleDelay .." Next gust cycle duration: "..gustCycleDuration.." Next number of intervals: "..gustIntervals)
 end
 
+local function RunAllFunctions() 
+	RandomizeGustCycleDuration()
+	RandomizeGustCycleDelay()
+	RandomizeGustSpeed()
+	RandomizeGustIntervals()
+	PrintAllValues()
+end
+
 workspace.GlobalWind = baseWind -- Set globalWind to baseWind initially
 wait(gustCycleDelay) -- Wait delay amount before starting gusts
 
@@ -96,10 +104,6 @@ while true do
 	workspace.GlobalWind = baseWind -- Reset wind to base wind at end of gust cycle
 	wait(math.random()*gustCycleDelay) -- Wait a random fraction of delay before next gust cycle
 
-	RandomizeGustCycleDuration()
-	RandomizeGustCycleDelay()
-	RandomizeGustSpeed()
-	RandomizeGustIntervals()
-	PrintAllValues()
+	RunAllFunctions()
 	print("Waiting for next gust..")
 end
