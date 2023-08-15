@@ -4,22 +4,11 @@
 !metadata
 
 Author: alex_black20101 (veternitzz)
-Version: 1.5.1
+Version: 1.5.2
 Description: Modified version of the gust script provided in "Breeze into wind"
 Filename: WindGusts.server.lua
 
 -- this relies on total randomness
-
-]]
-
---[[
-!changelog - version: 1.5.1
-
-changed: better randomization. all randomize functions now produce a randomseed first
-
-added: RandomizeGustCycleDelay()
-added: RandomizeGustCycleDuration()
-added: PrintAllValues() -- (to tidy up and make it easier to see in the console/output) 
 
 ]]
 
